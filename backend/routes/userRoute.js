@@ -3,8 +3,8 @@ import { loginUser, registerUser,getUser } from '../controllers/userController.j
 import requireAuth from '../middleware/requireAuth.js';
 const router = express.Router();
 
-router.post("/login",loginUser);
-router.post("/register",registerUser);
-router.get("/getuser", requireAuth, getUser)
+router.post("/user/login",loginUser);
+router.post("/user/register",registerUser);
+router.get("/user/getuser", requireAuth, getUser)
 
 export default router;
